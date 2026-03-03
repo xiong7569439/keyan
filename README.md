@@ -47,8 +47,8 @@ npm run dev
    - 点击 "创建项目" → 选择 "连接到 Git"
    - 选择您的GitHub仓库 `xiong7569439/keyan`
    - 构建设置：
-     - 构建命令: `npm run build`
-     - 构建输出目录: `out`
+     - 构建命令: `npx opennextjs-cloudflare build`
+     - 构建输出目录: `.opennext-nextjs-cloudflare`
    - 点击 "保存并部署"
 
 ### 方式二：命令行手动部署
@@ -65,8 +65,9 @@ npm run dev
 
 3. **部署**
    ```bash
-   npm run build
-   npx wrangler pages deploy out
+   npm install opennextjs-cloudflare
+   npx opennextjs-cloudflare build
+   npx wrangler pages deploy .opennext-nextjs-cloudflare --project-name=keyan
    ```
 
    部署完成后会显示访问地址。
