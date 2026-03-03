@@ -7,19 +7,19 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "npx opennextjs-cloudflare build && npx wrangler pages deploy .opennext-nextjs-cloudflare --project-name=keyan"
+    "deploy": "npm run build && npx wrangler pages deploy .vercel/output/static"
   },
   "dependencies": {
     "@ant-design/icons": "^5.4.0",
     "antd": "^5.20.0",
     "dayjs": "^1.11.13",
     "next": "15.1.0",
-    "opennextjs-cloudflare": "^1.0.0",
     "react": "^18",
     "react-dom": "^18",
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
+    "@cloudflare/next-on-pages": "^1.13.16",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
